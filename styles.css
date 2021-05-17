@@ -1,8 +1,9 @@
 /* --- G E N E R A L --- */
 body {
-    font-family: 'Cinzel', serif;
+    font-family: 'Josefin Sans', sans-serif;
     margin: 0px;
-    background-color:rgb(53, 52, 52);
+    margin-top: 10px;
+    background-color:rgb(20, 20, 22);
 }
 /* possible colours : rgb(51, 38, 38) */
 /* possible colours : rgb(38, 51, 49) */
@@ -15,21 +16,23 @@ body {
 }
 
 .nav-wrapper {
-    background-color:rgb(26, 26, 26);
-    padding: 30px;
+    background-color:rgb(24, 24, 26);
+    padding: 20px;
     display: flex;
     justify-content: space-between;
 }
 
 .nav-wrapper > .left-side > div {
     margin-right: 20px;
-    font-size: 0.9em
+    font-size: 0.9em;
 }
 
 .left-side {
     display: flex;
     text-transform: uppercase;
     padding: 6px;
+    text-align: center;
+    align-items: center;
 }
 
 /* --- N A V  B R A N D --- */
@@ -37,44 +40,48 @@ body {
     border: 3px solid transparent;
     padding: 6px;
     display: flex;
-    color: rgb(178, 185, 189);
+    color: rgb(186, 187, 187);
     text-decoration: none;
     transition: border-bottom 0.5s;
 }
 
 .nav-brand-wrapper a {
-    color: rgb(178, 185, 189);
+    color: rgb(194, 196, 197);
     text-decoration: none;
     transition: color 0.5s;
 }
 
 .nav-brand-wrapper:hover {
-    border: 3px solid rgb(178, 185, 189);
+    border: 3px solid rgb(194, 196, 197);
 }
 
 .nav-brand-wrapper a:hover {
-    color: rgb(178, 185, 189);
+    color: rgb(194, 196, 197);
 }
 
 /* --- N A V  L I N K --- */
 .nav-link-wrapper {
-    height: 22px;
+    border: 3px solid transparent;
+    padding: 6px;
+    display: flex;
+    color: rgb(186, 187, 187);
+    text-decoration: none;
     border-bottom: 3px solid transparent;
     transition: border-bottom 0.5s;
 }
 
 .nav-link-wrapper a {
-    color: rgb(178, 185, 189);
+    color: rgb(194, 196, 197);
     text-decoration: none;
     transition: color 0.5s;
 }
 
 .nav-link-wrapper:hover {
-    border-bottom: 3px solid rgb(178, 185, 189);
+    border-bottom: 3px solid rgb(194, 196, 197);
 }
 
 .nav-link-wrapper a:hover {
-    color: rgb(178, 185, 189);
+    color: rgb(194, 196, 197);
 }
 
 /* --- S U R V E Y  B O D Y --- */
@@ -84,18 +91,18 @@ body {
     height: 500px;
     width: auto;
     display: grid;
-    grid-template-columns: 500px auto;
+    grid-template-columns: 600px auto;
     column-gap: 10px;
 }
 .survey-item-wrapper {
     position: relative;
     filter: brightness(100%);
     padding: 10px;
-    background-color: rgb(26, 26, 26);
+    background-color: rgb(24, 24, 26);
 }
 
 .UI-to-survey {
-    height: 500px;
+    height: 600px;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -106,17 +113,22 @@ body {
 .img-text-wrapper {
     position: absolute;
     top: 0;
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
     height: 90%;
-    font-size: 50px;
-    color: rgb(178, 185, 189);
+    font-size: 45px;
     text-transform: uppercase;
     filter: opacity(0%);
     transition: filter .5s ease;
+    color: rgb(194, 196, 197);
+    text-decoration: none;
+}
+.img-text-wrapper a{
+    text-decoration: none;
 }
 
 .survey-item-wrapper:hover .img-text-wrapper {
@@ -131,31 +143,29 @@ body {
 
 /* --- S U R V E Y  C O N T E N T --- */
 
-.survey-questions-wrapper {
-}
-
 h1 {
-    background-color: rgb(26, 26, 26);
+    background-color: rgb(24, 24, 26);
     font-size: 50px;
-    color: rgb(178, 185, 189);
+    color: rgb(194, 196, 197);
     text-transform: uppercase;
     margin: 0px;
-    padding-left: 10px;
     text-align: center;
 }
 
 form {
+    display: grid;
+    max-width: 600px;
+    grid-template-columns: 1fr;
     padding-left: 10px;
-    font-size: 20px;
-    color: rgb(178, 185, 189);
+    color: rgb(194, 196, 197);
 }
 
 label {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .question {
-    font-size: 18px;
+    font-size: 22px;
 }
 .checkboxes {
     min-width: 350px;
@@ -164,6 +174,47 @@ label {
     width: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.rate {
+    margin: auto;
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #da681d;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #da681d;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #da681d;
+}
+
+.soumettre {
+    margin: auto;
 }
 
 /*https://asoftmurmur.com/*/
