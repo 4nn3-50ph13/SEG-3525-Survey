@@ -255,4 +255,19 @@ label {
     padding-bottom: 60px;
 }
 
-/*https://asoftmurmur.com/*/
+
+/* ---  O T H E R --- */
+
+.whydidyouclick {
+    font-size: 80px;
+    padding-top: 30px;
+    color: rgb(194, 196, 197);
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.whydidyouclick a{
+    color: rgb(194, 196, 197);
+    text-decoration: none;
+}
