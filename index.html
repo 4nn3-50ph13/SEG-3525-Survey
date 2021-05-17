@@ -39,22 +39,19 @@
                     <div class="survey-questions-wrapper">
                         <form>
                             <div class="row">
-                                <div class="question">Avez-vous déjà utilisé ce site web?</div>
-                                <input type="radio" id="yes" name="y-n" value="Oui">
+                                <div class="question">Combien de fois utilisez-vous ce site web par semaine?</div>
+                                <input type="radio" id="0" name="y-n" value="0">
                                 <span class="checkmark"></span>
-                                <label for="yes">Oui</label><br>
-                                <input type="radio" id="no" name="y-n" value="Non">
+                                <label for="0">0</label><br>
+                                <input type="radio" id="1-2" name="y-n" value="1-2">
                                 <span class="checkmark"></span>
-                                <label for="Non">Non</label><br>
-                            </div><br>
-                            <div class="row">
-                                <div class="question">L'interface semble-t-elle facile d'utilisation?</div>
-                                <input type="radio" id="yes" name="y-n" value="Oui">
+                                <label for="1-2">1-2</label><br>
+                                <input type="radio" id="3-5" name="y-n" value="3-5">
                                 <span class="checkmark"></span>
-                                <label for="yes">Oui</label><br>
-                                <input type="radio" id="no" name="y-n" value="Non">
+                                <label for="3-5">3-5</label><br>
+                                <input type="radio" id="6 et plus" name="y-n" value="6 et plus">
                                 <span class="checkmark"></span>
-                                <label for="Non">Non</label><br>
+                                <label for="6 et plus">6 et plus</label><br>
                             </div><br>
                             <div class="question">Quelles fonctions semblent intéressantes selon vous?</div>
                             <div class="checkboxes">
@@ -99,11 +96,11 @@
                                     <label for="White-noise"> White-noise</label>
                                 </div>
                             </div><br>
-                            <div class="question">Quelle fonction non présente aimeriez-vous avoir?</div>
+                            <div class="question">Quelle fonction non offerte aimeriez-vous avoir?</div>
                             <input type="text" id="idea" name="idea" value=""><br>
                             <div class="question">Avez-vous d'autres commentaires ou recommendations?</div>
                             <input type="text" id="commentaires" name="commentaires" value=""><br>
-                            <div class="question">Que donneriez-vous à l'interface d'utilisateur de ce site?</div>
+                            <div class="question">Que pensez-vous de l'apparence visuelle de ce site?</div>
                             <div class="rate">
                                 <input type="radio" id="star5" name="rate" value="1" />
                                 <label for="star5" title="text">5 stars</label>
@@ -116,6 +113,19 @@
                                 <input type="radio" id="star1" name="rate" value="5" />
                                 <label for="star1" title="text">1 star</label>
                               </div>
+                              <div class="question">Que pensez-vous de la facilité d'utilisation de ce site?</div>
+                              <div class="rate">
+                                  <input type="radio" id="star5" name="rate" value="1" />
+                                  <label for="star5" title="text">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="2" />
+                                  <label for="star4" title="text">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="text">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="4" />
+                                  <label for="star2" title="text">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="5" />
+                                  <label for="star1" title="text">1 star</label>
+                                </div>
                             <div class="soumettre">
                                 <input type="submit" value="Soumettre">
                             </div>
