@@ -3,20 +3,33 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     margin: 0px;
     margin-top: 10px;
-    background-color:rgb(20, 20, 22);
+    background-color:rgb(16, 16, 17);
+    background-image: linear-gradient( rgb(11, 11, 12), rgb(11, 11, 12), rgb(11, 11, 12), rgb(22, 15, 15));
 }
-/* possible colours : rgb(51, 38, 38) */
-/* possible colours : rgb(38, 51, 49) */
-/* possible colours : rgb(51, 43, 38) */
-/* possible colours : rgb(53, 52, 52) */
+
+h1 {
+    font-size: 50px;
+    color: rgb(194, 196, 197);
+    text-transform: uppercase;
+    margin: 0px;
+    text-align: center;
+}
+
+p6 {
+    font-size: 9px;
+}
 
 .container {
     display: grid;
     grid-template-columns: 1fr;
 }
 
+.content-wrapper {
+    height: fit-content;
+}
+
 .nav-wrapper {
-    background-color:rgb(24, 24, 26);
+    background-color:rgb(20, 20, 22);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -39,7 +52,6 @@ body {
 .nav-brand-wrapper {
     border: 3px solid transparent;
     padding: 6px;
-    display: flex;
     color: rgb(186, 187, 187);
     text-decoration: none;
     transition: border-bottom 0.5s;
@@ -88,21 +100,23 @@ body {
 
 .survey-items-wrapper {
     padding: 10px;
-    height: 500px;
+    height: fit-content;
     width: auto;
     display: grid;
-    grid-template-columns: 600px auto;
+    grid-template-columns: 652px auto;
     column-gap: 10px;
 }
 .survey-item-wrapper {
+    border-radius: 10px;
     position: relative;
     filter: brightness(100%);
     padding: 10px;
-    background-color: rgb(24, 24, 26);
+    background-color:rgb(20, 20, 22);
+    opacity: 75%;
 }
 
 .UI-to-survey {
-    height: 600px;
+    height: 652px;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -142,22 +156,20 @@ body {
 }
 
 /* --- S U R V E Y  C O N T E N T --- */
-
-h1 {
-    background-color: rgb(24, 24, 26);
-    font-size: 50px;
-    color: rgb(194, 196, 197);
-    text-transform: uppercase;
-    margin: 0px;
-    text-align: center;
+.survey-questions-wrapper {
+    border-radius: 10px;
+    background-color:rgb(20, 20, 22);
+    opacity: 75%;
+    padding: 20px;
 }
 
 form {
     display: grid;
-    max-width: 600px;
+    max-width: 660px;
     grid-template-columns: 1fr;
     padding-left: 10px;
     color: rgb(194, 196, 197);
+    row-gap: 10px;
 }
 
 label {
@@ -167,13 +179,14 @@ label {
 .question {
     font-size: 22px;
 }
+
 .checkboxes {
-    min-width: 350px;
-    max-width: 600px;
-    row-gap: 10px;
+    min-width: 590px;
+    max-width: 660px;
+    row-gap: 15px;
     width: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .rate {
@@ -215,6 +228,31 @@ label {
 
 .soumettre {
     margin: auto;
+}
+
+/* ---  P A G E  B O T T O M --- */
+
+.page-bottom {
+    background-color:rgb(20, 20, 22);
+    opacity: 75%;
+    color: rgb(78, 78, 78);
+    display: grid;
+    grid-template-columns: 1fr 20fr 1fr;
+    page-break-after: always;
+}
+
+.bottom-side {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.bottom-centre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 60px;
 }
 
 /*https://asoftmurmur.com/*/
