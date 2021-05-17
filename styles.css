@@ -1,0 +1,123 @@
+/* --- G E N E R A L --- */
+body {
+    font-family: 'Texturina', serif;
+    margin: 0px;
+    background-color:rgb(36, 36, 36);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.nav-wrapper {
+    background-color:rgb(26, 26, 26);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    font-size: 0.9em
+}
+
+.left-side {
+    display: flex;
+    text-transform: uppercase;
+    padding: 6px;
+}
+
+/* --- N A V  B R A N D --- */
+.nav-brand-wrapper {
+    border: 3px solid transparent;
+    padding: 6px;
+    display: flex;
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: border-bottom 0.5s;
+}
+
+.nav-brand-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-brand-wrapper:hover {
+    border: 3px solid #8a8a8a;
+}
+
+.nav-brand-wrapper a:hover {
+    color: #8a8a8a;
+}
+
+/* --- N A V  L I N K --- */
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 3px solid #8a8a8a;
+}
+
+.nav-link-wrapper a:hover {
+    color: #8a8a8a;
+}
+
+/* --- S U R V E Y  B O D Y --- */
+
+.survey-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.survey-item-wrapper {
+    position: relative;
+    filter: brightness(100%);
+}
+
+.UI-to-survey {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: filter .5s ease;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    font-size: 50px;
+    color: #8a8a8a;
+    text-transform: uppercase;
+    filter: opacity(0%);
+    transition: filter .5s ease;
+}
+
+.survey-item-wrapper:hover .img-text-wrapper {
+    filter: opacity(100%);
+    transition: filter .5s ease;
+}
+
+.survey-item-wrapper:hover .UI-to-survey {
+    filter: brightness(20%);
+    transition: filter .5s ease;
+}
+
+
+/*https://asoftmurmur.com/*/
