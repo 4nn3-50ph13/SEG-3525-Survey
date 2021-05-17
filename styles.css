@@ -1,9 +1,13 @@
 /* --- G E N E R A L --- */
 body {
-    font-family: 'Texturina', serif;
+    font-family: 'Cinzel', serif;
     margin: 0px;
-    background-color:rgb(36, 36, 36);
+    background-color:rgb(53, 52, 52);
 }
+/* possible colours : rgb(51, 38, 38) */
+/* possible colours : rgb(38, 51, 49) */
+/* possible colours : rgb(51, 43, 38) */
+/* possible colours : rgb(53, 52, 52) */
 
 .container {
     display: grid;
@@ -33,23 +37,23 @@ body {
     border: 3px solid transparent;
     padding: 6px;
     display: flex;
-    color: #8a8a8a;
+    color: rgb(178, 185, 189);
     text-decoration: none;
     transition: border-bottom 0.5s;
 }
 
 .nav-brand-wrapper a {
-    color: #8a8a8a;
+    color: rgb(178, 185, 189);
     text-decoration: none;
     transition: color 0.5s;
 }
 
 .nav-brand-wrapper:hover {
-    border: 3px solid #8a8a8a;
+    border: 3px solid rgb(178, 185, 189);
 }
 
 .nav-brand-wrapper a:hover {
-    color: #8a8a8a;
+    color: rgb(178, 185, 189);
 }
 
 /* --- N A V  L I N K --- */
@@ -60,32 +64,38 @@ body {
 }
 
 .nav-link-wrapper a {
-    color: #8a8a8a;
+    color: rgb(178, 185, 189);
     text-decoration: none;
     transition: color 0.5s;
 }
 
 .nav-link-wrapper:hover {
-    border-bottom: 3px solid #8a8a8a;
+    border-bottom: 3px solid rgb(178, 185, 189);
 }
 
 .nav-link-wrapper a:hover {
-    color: #8a8a8a;
+    color: rgb(178, 185, 189);
 }
 
 /* --- S U R V E Y  B O D Y --- */
 
 .survey-items-wrapper {
+    padding: 10px;
+    height: 500px;
+    width: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 500px auto;
+    column-gap: 10px;
 }
 .survey-item-wrapper {
     position: relative;
     filter: brightness(100%);
+    padding: 10px;
+    background-color: rgb(26, 26, 26);
 }
 
 .UI-to-survey {
-    height: 400px;
+    height: 500px;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -101,9 +111,9 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
-    height: 100%;
+    height: 90%;
     font-size: 50px;
-    color: #8a8a8a;
+    color: rgb(178, 185, 189);
     text-transform: uppercase;
     filter: opacity(0%);
     transition: filter .5s ease;
@@ -119,5 +129,41 @@ body {
     transition: filter .5s ease;
 }
 
+/* --- S U R V E Y  C O N T E N T --- */
+
+.survey-questions-wrapper {
+}
+
+h1 {
+    background-color: rgb(26, 26, 26);
+    font-size: 50px;
+    color: rgb(178, 185, 189);
+    text-transform: uppercase;
+    margin: 0px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+form {
+    padding-left: 10px;
+    font-size: 20px;
+    color: rgb(178, 185, 189);
+}
+
+label {
+    font-size: 14px;
+}
+
+.question {
+    font-size: 18px;
+}
+.checkboxes {
+    min-width: 350px;
+    max-width: 600px;
+    row-gap: 10px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 /*https://asoftmurmur.com/*/

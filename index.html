@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <title>Survey</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -32,7 +32,66 @@
                         </div>
                     </div>
                     <div class="survey-questions-wrapper">
-                        aaaa
+                        <h1>SURVEY</h1>
+                        <form>
+                            <div class="question">Avez-vous déjà utilisé ce site web?</div>
+                            <input type="radio" id="yes" name="y-n" value="Oui">
+                            <label for="yes">Oui</label><br>
+                            <input type="radio" id="no" name="y-n" value="Non">
+                            <label for="Non">Non</label><br>
+                        
+                            <div class="question">Quelles fonctions semblent intéressantes selon vous?</div>
+                            <div class="checkboxes">
+                                <div class="row">
+                                    <input type="checkbox" id="Rain" name="fonction" value="Rain">
+                                    <label for="Rain"> Rain</label><br>
+                                </div>
+                                <div class="row">
+                                    <input type="checkbox" id="Thunder" name="fonction" value="Thunder">
+                                    <label for="Thunder"> Thunder</label><br>
+                                </div>
+                                <div class="row">
+                                    <input type="checkbox" id="Waves" name="fonction" value="Waves">
+                                    <label for="Waves"> Waves</label>
+                                </div>
+                                <div class="row">
+                                    <input type="checkbox" id="Wind" name="fonction" value="Wind">
+                                    <label for="Wind"> Wind</label><br>
+                                </div>
+                                <div class="row">
+                                    <input type="checkbox" id="Fire" name="fonction" value="Fire">
+                                    <label for="Fire"> Fire</label><br>
+                                </div>
+                                <div class="row">
+                                    <input type="checkbox" id="Birds" name="fonction" value="Birds">
+                                    <label for="Birds"> Birds</label>
+                                </div>
+                                <div class="row">
+                                    <input type="checkbox" id="Crickets" name="fonction" value="Crickets">
+                                    <label for="Crickets"> Crickets</label>
+                                </div>
+                                <div class="row">
+                                    <input type="checkbox" id="Coffee-shop" name="fonction" value="Coffee-shop">
+                                    <label for="Coffee-shop"> Coffee shop</label><br>
+                                </div>
+                                <div class="row">
+                                    <input type="checkbox" id="Singing-Bowl" name="fonction" value="Singing-Bowl">
+                                    <label for="Singing-Bowl"> Singing Bowl</label><br>
+                                </div>
+                                <div class="row">
+                                    <input type="checkbox" id="White-noise" name="fonction" value="White-noise">
+                                    <label for="White-noise"> White-noise</label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">Quelle fonction qui n'est pas présente aimeriez-vous?</div>
+                            <input type="text" id="idea" name="idea" value=""><br>
+
+                            <div class="question">Avez-vous d'autres commentaires ou recommendations?</div>
+                            <input type="text" id="commentaires" name="commentaires" value=""><br>
+
+                            <input type="submit" value="Soumettre">
+                        </form>
                     </div>
                 </div>
             </div>
