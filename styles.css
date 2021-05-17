@@ -99,8 +99,11 @@ p6 {
 /* --- S U R V E Y  B O D Y --- */
 
 .survey-items-wrapper {
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px;
     height: fit-content;
+    max-width: 1400px;
     width: auto;
     display: grid;
     grid-template-columns: 652px auto;
