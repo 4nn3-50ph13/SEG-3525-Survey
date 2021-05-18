@@ -1,15 +1,36 @@
 /* --- G E N E R A L --- */
+:root {
+    color-scheme: light dark; /* both supported */
+}
+
+html {
+    --foreground-color: rgb(20, 20, 22);
+    --background-color: rgb(11, 11, 12);
+    --background-color2: rgb(9, 9, 10);
+    --reddish-accent-color: rgb(33, 16, 16);
+    --text-color: rgb(194, 196, 197);
+    --accent-color: #da681d;
+}
+
+html[data-theme='dark'] {
+    --foreground-color: rgba(167, 167, 167);
+    --background-color: rgba(128, 106, 106);
+    --background-color2: #1e2832a9;
+    --text-color: rgb(36, 36, 36);
+    --reddish-accent-color: #3c281e;
+}
+
 body {
     font-family: 'Josefin Sans', sans-serif;
     margin-top: 10px;
-    background-color:rgb(18, 18, 19);
-    background-image: linear-gradient( rgb(9, 9, 10), rgb(11, 11, 12), rgb(11, 11, 12), rgb(33, 16, 16));
+    background-color: var(--background-color);
+    background-image: linear-gradient( var(--background-color2), var(--background-color), var(--background-color), var(--reddish-accent-color));
 }
 
 h1 {
     font-size: 50px;
     letter-spacing: 10px;
-    color: rgb(194, 196, 197);
+    color: var(--text-color);
     text-transform: uppercase;
     margin: 0px;
     text-align: center;
@@ -29,14 +50,13 @@ p6 {
 }
 
 .nav-wrapper {
-    background-color:rgb(20, 20, 22);
+    background-color:var(--foreground-color);
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 250px auto 250px;
 }
 
 .nav-wrapper > .left-side > div {
-    margin-right: 20px;
     font-size: 0.9em;
 }
 
@@ -48,12 +68,75 @@ p6 {
     align-items: center;
 }
 
-/* --- N A V  B R A N D --- */
+.right-side {
+    display: flex;
+    align-items: center;
+}
+
+/* The switch - the box around the slider */
+
+.toggle-container {
+    padding-right: 20px;
+}
+
+.toggle-container > input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.toggle-container > label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 52px;
+	height: 27px;
+	background: grey;
+	float: right;
+	border-radius: 100px;
+	position: relative;
+}
+
+.toggle-container > label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+.toggle-container > input:checked + label {
+	background: var(--background-color);
+}
+
+.toggle-container > input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+.toggle-container > label:active:after {
+	width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+/* --- N A V  B R A N D / R I G T H  S I D E --- */
+
 .nav-brand-wrapper {
     border: 3px solid transparent;
     padding: 6px;
-    color: rgb(186, 187, 187);
+    color: var(--text-color);
     text-decoration: none;
+    text-align: right;
     transition: border-bottom 0.5s;
 }
 
@@ -70,20 +153,19 @@ p6 {
 .nav-brand-wrapper a:hover {
     color: rgb(194, 196, 197);
 }
-
 /* --- N A V  L I N K --- */
 .nav-link-wrapper {
     border: 3px solid transparent;
     padding: 6px;
     display: flex;
-    color: rgb(186, 187, 187);
+    color: var(--text-color);
     text-decoration: none;
     border-bottom: 3px solid transparent;
     transition: border-bottom 0.5s;
 }
 
 .nav-link-wrapper a {
-    color: rgb(194, 196, 197);
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.5s;
 }
@@ -93,7 +175,7 @@ p6 {
 }
 
 .nav-link-wrapper a:hover {
-    color: rgb(194, 196, 197);
+    color: var(--text-color);
 }
 
 /* --- S U R V E Y  B O D Y --- */
@@ -114,7 +196,7 @@ p6 {
     position: relative;
     filter: brightness(100%);
     padding: 10px;
-    background-color:rgb(20, 20, 22);
+    background-color:var(--foreground-color);
 }
 
 .UI-to-survey {
@@ -160,7 +242,7 @@ p6 {
 /* --- S U R V E Y  C O N T E N T --- */
 .survey-questions-wrapper {
     border-radius: 10px;
-    background-color:rgb(20, 20, 22);
+    background-color:var(--foreground-color);
     padding: 20px;
     padding-left: 30px;
 }
@@ -170,7 +252,7 @@ form {
     max-width: 660px;
     grid-template-columns: 1fr;
     padding-left: 10px;
-    color: rgb(194, 196, 197);
+    color: var(--text-color);
     row-gap: 10px;
 }
 
@@ -208,24 +290,24 @@ label {
     white-space:nowrap;
     cursor:pointer;
     font-size:30px;
-    color:#ccc;
+    color:var(--text-color);
 }
 .rate:not(:checked) > label:before {
     content: '★ ';
 }
 .rate > input:checked ~ label {
-    color: #da681d;    
+    color: var(--accent-color);    
 }
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
-    color: #da681d;  
+    color: var(--accent-color);  
 }
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
 .rate > input:checked ~ label:hover,
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
-    color: #da681d;
+    color: var(--accent-color);
 }
 
 
@@ -234,9 +316,9 @@ label {
 }
 
 input[type=submit] {
-    background-color: rgb(18, 18, 19);
+    background-color: var(--background-color);
     width: 100%;
-    color: rgb(194, 196, 197);
+    color: var(--text-color);
     padding: 12px 12px;
     font-size: 12px;
     border: 1px solid rgb(68, 68, 68);
@@ -246,8 +328,8 @@ input[type=submit] {
 }
 
 input[type=text], select {
-    background-color: rgb(18, 18, 19);
-    color: rgb(194, 196, 197);
+    background-color: var(--background-color);
+    color: var(--text-color);
     width: 100%;
     padding: 12px 12px;
     display: inline-block;
@@ -260,8 +342,7 @@ input[type=text], select {
 /* ---  P A G E  B O T T O M --- */
 
 .page-bottom {
-    background-color:rgb(20, 20, 22);
-    opacity: 75%;
+    background-color:var(--foreground-color);
     color: rgb(78, 78, 78);
     display: grid;
     grid-template-columns: 1fr 20fr 1fr;
@@ -288,13 +369,13 @@ input[type=text], select {
 .whydidyouclick {
     font-size: 80px;
     padding-top: 30px;
-    color: rgb(194, 196, 197);
+    color: var(--text-color);
     height: 100px;
     width: 100%;
     text-align: center;
 }
 
 .whydidyouclick a{
-    color: rgb(194, 196, 197);
+    color: var(--text-color);
     text-decoration: none;
 }
