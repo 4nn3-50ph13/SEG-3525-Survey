@@ -2,12 +2,13 @@
 body {
     font-family: 'Josefin Sans', sans-serif;
     margin-top: 10px;
-    background-color:rgb(16, 16, 17);
-    background-image: linear-gradient( rgb(11, 11, 12), rgb(11, 11, 12), rgb(11, 11, 12), rgb(29, 15, 15));
+    background-color:rgb(18, 18, 19);
+    background-image: linear-gradient( rgb(9, 9, 10), rgb(11, 11, 12), rgb(11, 11, 12), rgb(33, 16, 16));
 }
 
 h1 {
     font-size: 50px;
+    letter-spacing: 10px;
     color: rgb(194, 196, 197);
     text-transform: uppercase;
     margin: 0px;
@@ -114,7 +115,6 @@ p6 {
     filter: brightness(100%);
     padding: 10px;
     background-color:rgb(20, 20, 22);
-    opacity: 75%;
 }
 
 .UI-to-survey {
@@ -161,7 +161,6 @@ p6 {
 .survey-questions-wrapper {
     border-radius: 10px;
     background-color:rgb(20, 20, 22);
-    opacity: 75%;
     padding: 20px;
     padding-left: 30px;
 }
@@ -232,6 +231,30 @@ label {
 .soumettre {
     margin: auto;
 }
+
+input[type=submit] {
+    background-color: rgb(18, 18, 19);
+    width: 100%;
+    color: rgb(194, 196, 197);
+    padding: 12px 12px;
+    font-size: 12px;
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+input[type=text], select {
+    background-color: rgb(18, 18, 19);
+    color: rgb(194, 196, 197);
+    width: 100%;
+    padding: 12px 12px;
+    display: inline-block;
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
 
 /* ---  P A G E  B O T T O M --- */
 
