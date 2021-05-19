@@ -13,11 +13,12 @@ html {
 }
 
 html[data-theme='dark'] {
-    --foreground-color: rgba(167, 167, 167);
-    --background-color: rgba(128, 106, 106);
-    --background-color2: #1e2832a9;
+    --foreground-color: rgb(178, 183, 184);
+    --background-color: rgb(151, 135, 135);
+    --background-color2: #49535ea9;
     --text-color: rgb(36, 36, 36);
     --reddish-accent-color: #3c281e;
+    --accent-color: #92603e;
 }
 
 body {
@@ -240,6 +241,17 @@ html.transition *:after {
 }
 
 /* --- S U R V E Y  C O N T E N T --- */
+
+form > input[type=text] {
+    margin: auto;
+    width: 40%;
+    transition: 0.5s;
+}
+
+form > input[type=text]:focus-visible {
+    width: 100%;
+}
+
 .survey-questions-wrapper {
     border-radius: 10px;
     background-color:var(--foreground-color);
