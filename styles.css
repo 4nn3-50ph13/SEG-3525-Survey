@@ -189,10 +189,12 @@ html.transition *:after {
     max-width: 1400px;
     width: auto;
     display: grid;
-    grid-template-columns: 652px auto;
+    grid-template-columns: auto auto;
     column-gap: 10px;
 }
 .survey-item-wrapper {
+    min-width: 640px;
+    max-width: 690px;
     border-radius: 10px;
     position: relative;
     filter: brightness(100%);
@@ -279,7 +281,7 @@ label {
 .checkboxes {
     min-width: 590px;
     max-width: 660px;
-    row-gap: 15px;
+    row-gap: 30px;
     width: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
