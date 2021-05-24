@@ -37,6 +37,17 @@ h1 {
     text-align: center;
 }
 
+p2 {
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    margin: 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
 p6 {
     font-size: 9px;
 }
